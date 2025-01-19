@@ -11,6 +11,8 @@ python ingest_data.py  --user=root --password=root --host=localhost --port=5432 
 
 # Execute dockerized pipeline ingest_data
 
-docker build -t taxi_ingest:v1
+docker build -t taxi:v1
 
 docker run taxi:v1 --user=root --password=root --host=localhost --port=5432 --db=ny_taxi --table_name=yellow_taxi_data --url=${URL}
+
+docker run -v /d:/app taxi:v1 --user=root --password=root --host=localhost --port=5432 --db=ny_taxi --table_name=yellow_taxi_data --url=${URL}
