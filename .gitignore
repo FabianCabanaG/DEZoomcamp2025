@@ -49,4 +49,5 @@ $RECYCLE.BIN/
 ny_taxi_postgres_data/
 
 *.csv
+*.gz
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocodei
